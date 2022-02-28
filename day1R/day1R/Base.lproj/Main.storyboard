@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xlG-Hx-cKf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="O6m-Nd-dFh">
+            <objects>
+                <viewController id="xlG-Hx-cKf" customClass="ViewController" customModule="get" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mJI-iC-XAX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bbe-g2-fyd">
+                                <rect key="frame" x="100" y="163" width="214" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segment1action:" destination="xlG-Hx-cKf" eventType="valueChanged" id="tab-YI-2aA"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="adK-Ab-MGB">
+                                <rect key="frame" x="50" y="244" width="314" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mkY-NB-NKE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mkY-NB-NKE" firstAttribute="trailing" secondItem="Bbe-g2-fyd" secondAttribute="trailing" constant="100" id="7IA-e2-JFB"/>
+                            <constraint firstItem="adK-Ab-MGB" firstAttribute="top" secondItem="Bbe-g2-fyd" secondAttribute="bottom" constant="50" id="NXI-DL-SNL"/>
+                            <constraint firstItem="Bbe-g2-fyd" firstAttribute="top" secondItem="mkY-NB-NKE" secondAttribute="top" constant="119" id="Wok-oy-NfF"/>
+                            <constraint firstItem="Bbe-g2-fyd" firstAttribute="leading" secondItem="mkY-NB-NKE" secondAttribute="leading" constant="100" id="eVk-IL-EKP"/>
+                            <constraint firstItem="mkY-NB-NKE" firstAttribute="trailing" secondItem="adK-Ab-MGB" secondAttribute="trailing" constant="50" id="fsB-Wr-A6Q"/>
+                            <constraint firstItem="adK-Ab-MGB" firstAttribute="leading" secondItem="mkY-NB-NKE" secondAttribute="leading" constant="50" id="zSM-Xb-cBl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segment1" destination="Bbe-g2-fyd" id="8tW-tE-f1k"/>
+                        <outlet property="segment2" destination="adK-Ab-MGB" id="pZ4-9S-6Mi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVo-7u-3EG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
